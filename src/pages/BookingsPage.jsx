@@ -27,7 +27,7 @@ export default function BookingsPage() {
         <>
             <div className="flex">
                 {/* ฝั่งซ้าย */}
-                <div className="relative bg-blue_46529D w-[585px] -z-40 h-screen flex flex-col">
+                <div className="relative bg-blue_46529D w-[585px] h-screen flex flex-col">
                     <div className="absolute right-0 bg-blue_2EBAEE w-[495px] h-[135px] cursor-pointer"
                     onClick={() => navigate('/')}>
                         <div className="absolute bottom-[25px] left-[50px] font-bold text-white text-[54px]">{roomId}</div>
@@ -39,7 +39,7 @@ export default function BookingsPage() {
                                 <div className="opacity-50">{fullDayFormat[upComingBooking.fullDate.day]}</div>
                                 <div>{`${upComingBooking.fullDate.date} ${upComingBooking.fullDate.month}`}</div>
                             </div>
-                            <div className="flex-1 overflow-y-auto scrollbar-hidden">
+                            <div className="flex-1 overflow-y-auto scrollbar-hidden z-10">
                                 {upComingBooking.bookings.map((booking) => (
                                     <EventList
                                         key={booking.id}
@@ -51,7 +51,7 @@ export default function BookingsPage() {
                             </div>
                         </div>
                     }
-                    <div className="absolute bottom-0 -z-30 w-full h-[40%] bg-blue_4D59A1" />
+                    <div className="absolute bottom-0 w-full h-[40%] bg-blue_4D59A1" />
                 </div>
                 {/* ฝั่งขวา */}
                 <div className="flex-grow flex flex-col h-screen">
