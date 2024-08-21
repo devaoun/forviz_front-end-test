@@ -56,7 +56,7 @@ export default function BookingsPage() {
                 {/* ฝั่งขวา */}
                 <div className="flex-grow flex flex-col h-screen">
                     <div className="relative min-h-[135px] bg-gray_EFEEEC">
-                        <div className="absolute bottom-0 flex w-full h-[52px] justify-center">
+                        <div className="absolute bottom-0 flex w-fit h-[52px] justify-center left-[8%] font-medium text-2xl">
                             <PeriodSelector period={"THIS WEEK"} periodPath={"thisweek"} />
                             <PeriodSelector period={"NEXT WEEK"} periodPath={"nextweek"} />
                             <PeriodSelector period={"WHOLE MONTH"} periodPath={"wholemonth"} />

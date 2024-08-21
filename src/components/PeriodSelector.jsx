@@ -18,7 +18,7 @@ export default function PeriodSelector({
 
     return (
         <button
-            className={`relative w-full flex justify-center hover:opacity-100 ${!isActive ? 'opacity-50' : ''}`}
+            className={`relative flex justify-center w-[200px] hover:opacity-100 ${!isActive ? 'opacity-50' : ''}`}
             onClick={handleClick}
         >
             {period}
