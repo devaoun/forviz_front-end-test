@@ -29,7 +29,7 @@ export default function BookingsPage() {
                 {/* ฝั่งซ้าย */}
                 <div className="relative bg-blue_46529D w-[585px] h-screen flex flex-col">
                     <div className="absolute right-0 bg-blue_2EBAEE w-[495px] h-[135px] cursor-pointer"
-                    onClick={() => navigate('/')}>
+                        onClick={() => navigate('/')}>
                         <div className="absolute bottom-[25px] left-[50px] font-bold text-white text-[54px]">{roomId}</div>
                     </div>
                     {upComingBooking &&
@@ -64,10 +64,15 @@ export default function BookingsPage() {
                     </div>
                     <div className="relative h-full overflow-y-scroll scrollbar-hidden">
                         <div className="absolute w-[1px] h-full bg-gray_ECECEC left-[8%]"></div>
-                        <div className="flex flex-col">
-                            {periodBookings.map((item, index) => (
-                                <Timeline key={index} bookings={item.bookings} fullDate={item.fullDate} />
-                            ))}
+                        <div className="flex flex-col h-full">
+                            {periodBookings.length > 0 ? (
+                                periodBookings.map((item, index) => (
+                                    <Timeline key={index} bookings={item.bookings} fullDate={item.fullDate} />
+                                ))
+                            ) 
+                            : 
+                            <div className="h-full flex justify-center items-center text-2xl">There are no bookings during this period.</div>
+                            }
                         </div>
                     </div>
                 </div>
