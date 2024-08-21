@@ -13,17 +13,20 @@ export const getBookingsForWeek = (roomId, weekNo) => {
             toDay.setHours(0, 0, 0, 0)
             let startDate = new Date(toDay)
             let endDate = new Date(startDate)
-            if (weekNo === "thisweek") {
-                endDate.setDate(startDate.getDate() + 7)
-            } else if (weekNo === 'nextweek') {
-                startDate.setDate(startDate.getDate() + 7)
-                endDate.setDate(startDate.getDate() + 7)
-            } else if (weekNo === 'wholemonth') {
-                startDate = new Date(toDay.getFullYear(), toDay.getMonth(), 1);
-                endDate = new Date(toDay.getFullYear(), toDay.getMonth() + 1, 1);
-            }
-            else {
-                throw new Error('Invalid weekNo')
+            switch (weekNo) {
+                case "thisweek":
+                    endDate.setDate(startDate.getDate() + 7);
+                    break;
+                case "nextweek":
+                    startDate.setDate(startDate.getDate() + 7);
+                    endDate.setDate(startDate.getDate() + 7);
+                    break;
+                case "wholemonth":
+                    startDate = new Date(toDay.getFullYear(), toDay.getMonth(), 1);
+                    endDate = new Date(toDay.getFullYear(), toDay.getMonth() + 1, 1);
+                    break;
+                default:
+                    throw new Error('Invalid weekNo');
             }
             const bookingsByRoomId = bookings.filter(booking => booking.roomId === roomId)
             const bookingsForWeek = bookingsByRoomId.filter(booking => {
