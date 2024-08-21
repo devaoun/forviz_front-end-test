@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-bg {
+    background: linear-gradient(0deg, #B9BDC8, #B9BDC8),
+        linear-gradient(236.58deg, #BCBFC8 10.31%, #91A2C6 90.59%),
+        radial-gradient(75.44% 75.44% at 30.03% 0%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.cc {
+    border: 2px dashed red;
+}
