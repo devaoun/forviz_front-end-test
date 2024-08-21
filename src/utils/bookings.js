@@ -1,7 +1,7 @@
 import dayjs from 'dayjs'
 import weekday from 'dayjs/plugin/weekday';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
-import bookings from '../mockData'
+import {bookings} from '../mockData'
 
 dayjs.extend(weekday);
 dayjs.extend(customParseFormat);
