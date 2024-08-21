@@ -27,7 +27,7 @@ export default function BookingsPage() {
         <>
             <div className="flex">
                 {/* ฝั่งซ้าย */}
-                <div className="relative bg-blue_46529D w-[585px] h-screen flex flex-col">
+                <div className="relative bg-blue_46529D w-[585px] -z-40 h-screen flex flex-col">
                     <div className="absolute right-0 bg-blue_2EBAEE w-[495px] h-[135px] cursor-pointer"
                     onClick={() => navigate('/')}>
                         <div className="absolute bottom-[25px] left-[50px] font-bold text-white text-[54px]">{roomId}</div>
