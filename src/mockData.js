@@ -1,4 +1,4 @@
-export const roomId = ["A101","A102","Auditorium"]
+export const roomIds = ["A101","A102","Auditorium"]
 export const bookings = [
     {
         "id": 1,
